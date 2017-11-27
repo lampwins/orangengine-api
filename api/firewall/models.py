@@ -28,6 +28,7 @@ class Firewall(models.Model):
     refresh_interval = models.PositiveIntegerField(default=15, help_text="Policy refresh interval in minutes")
     panorama_device_group = models.CharField(max_length=255, blank=True, null=True)
     palo_alto_api_key = models.CharField(max_length=255, blank=True, null=True)
+    enabled = models.BooleanField(default=True)
 
     def clean(self):
         """
