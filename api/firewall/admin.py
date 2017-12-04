@@ -13,7 +13,8 @@ class FirewallForm(ModelForm):
     class Meta:
         model = Firewall
         fields = [
-            'name','hostname', 'username', 'password', 'private_key', 'device_type', 'panorama_device_group', 'palo_alto_api_key'
+            'name','hostname', 'username', 'password', 'private_key', 'device_type', 'panorama_device_group',
+            'palo_alto_api_key', 'enabled',
         ]
         widgets = {
             'password': PasswordInput(),
@@ -24,6 +25,6 @@ class FirewallForm(ModelForm):
 @admin.register(Firewall)
 class FirewallAdmin(admin.ModelAdmin):
     list_display = [
-        'name','hostname', 'username', 'device_type',
+        'name','hostname', 'username', 'device_type', 'enabled',
     ]
     form = FirewallForm

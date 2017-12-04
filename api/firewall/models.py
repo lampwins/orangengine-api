@@ -49,7 +49,6 @@ class Firewall(models.Model):
                 raise ValidationError({
                     'hostname': "Hostname is not valid"
                 })
-        
 
         if not self.password and not self.private_key:
             raise ValidationError('Must specify either password or private key name. Password is optional if using key based authentication.')

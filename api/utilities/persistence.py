@@ -26,7 +26,7 @@ class OEDeviceInstancePool(object):
             'host': model.hostname,
             'username': model.username,
             'password': model.password,
-            'device_type': model.device_type,
+            'device_type': model.get_device_type_display(),
             'apikey': model.palo_alto_api_key,
         }
 

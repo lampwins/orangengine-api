@@ -6,3 +6,4 @@ django-rest-swagger>=2.1.0
 djangorestframework>=3.6.4
 Markdown>=2.6.7
 celery>=4.1.0
+orangengine
